@@ -1,0 +1,78 @@
+.topnav {
+  opacity:0.8;
+  overflow: hidden;
+  background-color: black;
+
+}
+
+.topnav a{
+	float: left;
+	color : white;
+	text-align: center;
+  	padding: 14px 16px;
+  	font-size: 17px;
+	text-decoration: none;	
+	margin-left: 40px;
+
+
+}
+
+.topnav a:hover {
+  background-color: white;
+  color: cyan;
+}
+
+.imgfirst { 
+  /* The image used */
+  background-image: url("main.jpg");
+
+  /* Set a specific height */
+  height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.desc{
+	padding: 30px;
+	background-color: black;
+	opacity : 0.5;
+	font-size: 30px;
+
+}
+
+h1{
+	color: white;
+}
+
+h3{
+	color: white;
+}
+
+p{
+	color: white;
+}
+
+.imgsecond { 
+  /* The image used */
+  background-image: url("second.jpg");
+
+  /* Set a specific height */
+  height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.reg{
+	padding: 30px;
+	background-color: black;
+	opacity : 0.5;
+	font-size: 30px;
+}

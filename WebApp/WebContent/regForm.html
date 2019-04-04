@@ -1,0 +1,96 @@
+<!Doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Registration Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+	<script>
+		function validate(){
+		var x,text,flag;
+		flag=0;
+		x=document.getElementById("fname").value;
+		if(x==""){flag++;alert("Enter Name first");
+		return false;}
+	
+		x=document.getElementById("mname").value;
+		if(x==""){flag++;alert("Enter Middle Name");
+		return false;}
+	
+		x=document.getElementById("lname").value;
+		if(x==""){flag++;alert("Enter Last Name");
+		return false;}
+	
+		x=document.getElementById("age").value;
+		
+	     if(x >>> 0 === parseFloat(x)){
+	    	 return true;
+	     }else{
+	    	 flag++;alert("Enter Age ");
+	    	 return false;
+	     }
+		
+	
+		x=document.getElementByName("gender").value;
+		if(x[0].checked!=true || x[1].checked!=true){flag++;alert("Enter Gender ");
+		return false;}
+	
+		x=document.getElementByName("address").value;
+		if (x == "")  {flag++;
+	        alert("Please enter some data (not spaces!)");
+	        return false;
+	    }
+		
+		if(flag==0){alert("Data Entered Correctly!!")
+			return true;};
+		}
+	</script>
+
+	<div class = "nav">
+		<a href=index.html>Home</a>
+	</div>
+
+    <form action = "index.jsp" method = "post">
+    	<div class="title_class">
+    		<h1>Registration Form</h1>
+		</div>
+
+        <div class="textfields" >
+        First Name <br>
+        <input type="text" align="top" name="first_name" id="fname">
+        <br>
+        Middle Name <br> 
+        <input type="text" name="middle_name" id="mname">
+        <br>
+        Last Name <br>
+        <input type="text" name="last_name" id="lname">
+        <br>
+        Age <br>
+        <input type="text" name="age" id="age">
+        </div>
+
+        <div class="radio_class">
+        	Gender <br>
+        	<br>
+ 				<input type = "radio" name = "gender" value = "Male" id="male" required> Male
+        		<input type = "radio" name = "gender" value = "Female" id="female"> Female
+        	<br>
+    	</div>
+        
+    	<div class="add_class">
+         Address  <br>
+         <input type="text"  name="address" id="add">
+         
+        </div>
+
+        <div class="button_class">
+        <br>
+        <button onclick="return validate()">Submit</button>
+    	</div>
+    </form>
+</body>
+</html>
